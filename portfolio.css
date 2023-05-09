@@ -1,0 +1,56 @@
+/* shared css */
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 950px 1fr;
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-areas:
+    "head head head"
+    ".    inner  ."
+    "foot foot foot";
+}
+header {
+  grid-area: head;
+}
+.inner-grid {
+  grid-area: inner;
+}
+footer {
+  grid-area: foot;
+}
+
+/* header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+  padding-bottom: 50px;
+}
+.left-h {
+  display: flex;
+  padding-left: 20px;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.2rem;
+}
+.right-h {
+  display: flex;
+  align-items: start;
+  padding-right: 100px;
+}
+.header-link {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+  padding-top: 35px;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+}
+.header-link a {
+  text-decoration: none;
+}
